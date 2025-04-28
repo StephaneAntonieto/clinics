@@ -1,39 +1,73 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Clinics Core
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+The `clinics_core` library is a Dart package that provides foundational utilities, business logic, and reusable components for building clinic management applications. It is designed to integrate seamlessly with Flutter projects.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- **Functional Programming Utilities**: Includes `Either`, `Unit`, and `Nil` for functional programming paradigms.
+- **REST Client**: A customizable `RestClient` built on `dio` with support for authentication and interceptors.
+- **State Management**: Utilities for managing asynchronous states and overlay loaders.
+- **Messaging System**: Tools for displaying success, error, and informational messages.
+- **Constants**: Centralized storage for application-wide constants.
 
-## Getting started
+## Directory Overview
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+### `lib/src/fp`
+
+- **`either.dart`**: Provides the `Either` class for functional error handling.
+- **`unit.dart`**: Represents a unit type for functional programming.
+- **`nil.dart`**: Represents a `Nil` type for functional programming.
+
+### `lib/src/restClient`
+
+- **`rest_client.dart`**: A REST client with built-in support for authentication and logging.
+- **`interceptors/auth_interceptors.dart`**: Handles authentication headers using `SharedPreferences`.
+
+### `lib/src/helpers`
+
+- **`messages.dart`**: Provides utilities for showing top snack bar messages and managing message states.
+
+### `lib/src/loader`
+
+- **`clinics_loader.dart`**: A customizable loader widget for asynchronous operations.
+
+### `lib/src/constants`
+
+- **`local_storage_constants.dart`**: Defines constants for local storage keys.
+
+### `lib/src`
+
+- **`clinics_core_config.dart`**: A configuration class for setting up the core module in a Flutter application.
+
+## Installation
+
+1. Add the following dependency to your `pubspec.yaml`:
+   ```yaml
+   dependencies:
+     clinics_core:
+       path: ../clinics_core
+   ```
+2. Run `flutter pub get` to fetch the dependencies.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+### Importing the Library
+
+To use the library, import the desired modules:
 
 ```dart
-const like = 'sample';
+import 'package:clinics_core/clinics_core.dart';
 ```
 
-## Additional information
+### Example: Using the RestClient
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+```dart
+final client = RestClient('https://api.example.com');
+final response = await client.get('/endpoint');
+```
+
+### Example: Showing a Success Message
+
+```dart
+Messages.showSuccess('Operation completed successfully!', context);
+```
