@@ -1,3 +1,4 @@
+import 'package:clinics_core/src/theme/clinics_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_getit/flutter_getit.dart';
 import 'package:flutter/foundation.dart';
@@ -32,6 +33,8 @@ class ClinicsCoreConfig extends StatelessWidget {
           loader: ClinicsLoader(),
           builder: (navigatorObserver) {
             return MaterialApp(
+              theme: ClinicsTheme.lightTheme,
+              darkTheme: ClinicsTheme.dartTheme,
               navigatorObservers: [navigatorObserver, flutterGetItNavObserver],
               routes: routes,
               title: title,
