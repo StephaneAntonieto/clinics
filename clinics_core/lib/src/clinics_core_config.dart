@@ -25,6 +25,7 @@ class ClinicsCoreConfig extends StatelessWidget {
   Widget build(BuildContext context) {
     return FlutterGetIt(
       debugMode: kDebugMode,
+
       bindings: binding,
       pages: [...pages ?? [], ...pagesBuilders ?? []],
       modules: modules,
@@ -33,6 +34,7 @@ class ClinicsCoreConfig extends StatelessWidget {
           loader: ClinicsLoader(),
           builder: (navigatorObserver) {
             return MaterialApp(
+              debugShowCheckedModeBanner: false,
               theme: ClinicsTheme.lightTheme,
               darkTheme: ClinicsTheme.dartTheme,
               navigatorObservers: [navigatorObserver, flutterGetItNavObserver],
