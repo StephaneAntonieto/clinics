@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:developer';
 
 import 'package:clinics_self_service/src/modules/home/home_module.dart';
+import 'package:clinics_self_service/src/modules/self_service/self_service_module.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_getit/flutter_getit.dart';
 import 'package:clinics_core/clinics_core.dart';
@@ -30,7 +31,7 @@ class ClinicsSelfServiceApp extends StatelessWidget {
       pagesBuilders: [
         FlutterGetItPageBuilder(page: (_) => const SplashPage(), path: '/'),
       ],
-      modules: [AuthModule(), HomeModule()],
+      modules: [AuthModule(), HomeModule(), SelfServiceModule()],
     );
   }
 }
