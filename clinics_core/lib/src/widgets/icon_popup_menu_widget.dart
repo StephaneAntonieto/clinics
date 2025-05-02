@@ -1,8 +1,8 @@
 import 'package:clinics_core/clinics_core.dart';
 import 'package:flutter/material.dart';
 
-class IconPopupMenu extends StatelessWidget {
-  const IconPopupMenu({super.key});
+class IconPopupMenuWidget extends StatelessWidget {
+  const IconPopupMenuWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

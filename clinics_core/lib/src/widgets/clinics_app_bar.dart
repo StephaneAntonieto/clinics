@@ -18,7 +18,7 @@ class ClinicsAppBar extends AppBar {
             ],
           ),
           child: Padding(
-            padding: const EdgeInsets.only(left: 64),
+            padding: const EdgeInsets.only(left: 64, top: 44),
             child: Image.asset('assets/images/logo_horizontal.png'),
           ),
         ),

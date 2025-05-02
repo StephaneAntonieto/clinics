@@ -40,7 +40,7 @@ dependencies:
   asyncstate: ^2.1.1-dev.1
   dotted_border: ^2.1.0
   validatorless: ^1.2.3
-  signals_flutter: ^6.0.2
+  signals_flutter: ^3.0.0
   dio: ^5.8.0+1
   shared_preferences: ^2.2.2
   json_annotation: ^4.8.1

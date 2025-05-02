@@ -1,6 +1,7 @@
 import 'package:asyncstate/asyncstate.dart';
-import 'package:signals_flutter/signals_core.dart';
+import 'package:signals_flutter/signals_flutter.dart';
 import 'package:clinics_core/clinics_core.dart';
+
 import 'package:clinics_self_service/src/services/user_login_service.dart';
 
 class LoginController with MessageStateMixin {
@@ -9,8 +10,8 @@ class LoginController with MessageStateMixin {
 
   final UserLoginService _userLoginService;
 
-  final _logged = Signal(false);
-  final _obscurePassword = Signal(true);
+  final _logged = signal(false);
+  final _obscurePassword = signal(true);
 
   bool get logged => _logged();
   bool get obscurePassword => _obscurePassword();

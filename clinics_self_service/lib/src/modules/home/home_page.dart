@@ -12,7 +12,7 @@ class HomePage extends StatelessWidget {
       appBar: ClinicsAppBar(
         actions: [
           PopupMenuButton<int>(
-            child: const IconPopupMenu(),
+            child: const IconPopupMenuWidget(),
             itemBuilder: (context) {
               return [
                 const PopupMenuItem<int>(
@@ -49,7 +49,7 @@ class HomePage extends StatelessWidget {
                 height: 48,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.of(context).pushReplacementNamed('/self_service');
+                    Navigator.of(context).pushReplacementNamed('/self-service');
                   },
                   child: const Text('INICIAL TERMINAL'),
                 ),

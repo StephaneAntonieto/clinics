@@ -10,4 +10,4 @@ export 'src/exceptions/repository_exception.dart';
 export 'src/exceptions/service_exception.dart';
 export 'src/theme/clinics_theme.dart';
 export 'src/widgets/clinics_app_bar.dart';
-export 'src/widgets/icon_popup_menu.dart';
+export 'src/widgets/icon_popup_menu_widget.dart';
